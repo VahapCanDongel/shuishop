@@ -1,7 +1,7 @@
 export default function Navigation() {
     return (
         <div className="flex justify-center w-full items-center p-4 ">
-            <div className="flex justify-between w-full sm:justify-between sm:w-full sm:items-center">
+            <div className="flex justify-between w-1/2 sm:justify-between sm:w-full sm:items-center">
                 <div>
                     <img src="https://www.nicepng.com/png/full/307-3078997_some-things-on-the-horizon-for-sushi-sushi.png" className="w-[100px]" />
                 </div>
@@ -19,7 +19,7 @@ export default function Navigation() {
                         Cart</li>
                 </ul>
 
-                <div className=" invisible sm:visible flex justify-center items-center gap-6">
+                <div className="hidden  sm:visible sm:flex sm:justify-center sm:items-center sm:gap-6">
                     <div className="p-2 rounded-md w-[60px] h-[60px] flex flex-col justify-center items-center border-[1px] border-gray-400">
                         <svg width={25} height={25} className="fill-gray-800" viewBox="0 0 24 24">
                             <path d="M10 20a2 2 0 1 1 0-4 2 2 0 0 1 0 4Zm7 0a2 2 0 1 1 0-4 2 2 0 0 1 0 4ZM3.962 5.923a.962.962 0 0 1 0-1.923h1.151c.902 0 1.682.626 1.878 1.506l1.253 5.642c.196.88.976 1.506 1.878 1.506h7.512l1.442-5.77H9.731a.962.962 0 0 1 0-1.922h9.345a1.923 1.923 0 0 1 1.866 2.39L19.5 13.12a1.923 1.923 0 0 1-1.866 1.457h-7.512a3.846 3.846 0 0 1-3.755-3.012L5.113 5.923h-1.15Z" />

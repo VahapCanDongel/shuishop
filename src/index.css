@@ -2,6 +2,18 @@
 @tailwind components;
 @tailwind utilities;
 
-body {
-    @apply bg-zinc-50
+@layer utilities {
+    .categoryNav:hover > .childNav {
+        @apply transition-all duration-300 w-full
+    }
+
+
+
+
 }
+
+body {
+    @apply bg-zinc-50;
+}
+
+
