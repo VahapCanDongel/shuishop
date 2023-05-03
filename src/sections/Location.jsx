@@ -17,7 +17,7 @@ export default function Location() {
         className="rounded-md shadow-xl w-full"
       ></iframe>
 
-        <div className="flex flex-col gap-2 bg-green-300 rounded-md p-4 absolute mt-[150px] mr-[800px] sm:mt-[260px] sm:mr-0 sm:w-[250px]">
+        <div className="flex flex-col gap-2 bg-green-300 rounded-md p-4 absolute mt-[150px] mr-[850px] sm:mt-[260px] sm:mr-0 sm:w-[250px] shadow-2xl">
             <div className="text-[30px] font-bold sm:text-[20px]">We are very close to you!</div>
             <div>
                 <div className="text-[18px] sm:text-[12px]">Our locations are based in the following cities:</div>
@@ -28,7 +28,7 @@ export default function Location() {
                     <li>Oxford</li>
                 </ul>
             </div>
-            <div className="sm:text-[12px]">You can also email as at <span className="font-bold">somesushishopwebiste@gmail.com</span></div>
+            <div className="sm:text-[12px]">You can also email as at <span className="italic">somesushishopwebiste@gmail.com</span> for any enquiries.</div>
         </div>
 
       </div>

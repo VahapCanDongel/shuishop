@@ -11,7 +11,7 @@ export default function Footer() {
         <img src="https://www.freepnglogos.com/uploads/app-store-logo-png/apple-app-store-travel-awards-globestamp-7.png" className="w-[200px]"/>
       </div>
 
-      <div>
+      <div className="flex flex-col justify-between h-[200px]">
         <svg
           width="25"
           height="25"
