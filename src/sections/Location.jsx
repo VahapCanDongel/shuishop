@@ -2,7 +2,7 @@ import SectionTitle from "../components/Section/SectionTitle";
 
 export default function Location() {
   return (
-    <div className="my-20 flex justify-between flex-col items-center w-[80%] sm:flex-col gap-4 sm:w-full">
+    <div className="my-20 flex justify-between flex-col items-center w-[80%] sm:flex-col gap-4 sm:w-full" id="location">
       <SectionTitle title={"Where Are We Located?"} />
       <div className="flex justify-evenly w-full">
       <iframe

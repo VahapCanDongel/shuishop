@@ -1,6 +1,6 @@
 export default function Home() {
     return (
-        <div className="flex justify-evenly items-center w-[80%] my-20 gap-6 sm:w-full sm:flex-col">
+        <div className="flex justify-evenly items-center w-[80%] my-20 gap-6 sm:w-full sm:flex-col" id="home">
             <div className="relative">
                 <div className="text-[120px] font-bold font-secular w-[900px] z-10 relative sm:text-[80px] sm:w-[400px] sm:ml-5">Find our delicious food!</div>
                 <div className="text-[30px] animate-bounce w-[700px] z-10 relative bottom-4 sm:w-[300px] sm:text-[20px] sm:ml-5">Hey! Our delicious food is waiting for you, we are always near you.</div>

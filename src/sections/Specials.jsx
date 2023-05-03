@@ -4,7 +4,7 @@ import Card from "../components/Specials/Card";
 
 export default function Specials() {
     return (
-        <div className="my-20 flex justify-between flex-col items-center w-[80%] sm:flex-col">
+        <div className="my-20 flex justify-between flex-col items-center w-[80%] sm:flex-col" id="specials">
 
             <div className="mr-auto flex justify-between w-full">
                 <SectionTitle title={'Our Special Food Deals %'}/>
