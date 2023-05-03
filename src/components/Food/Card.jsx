@@ -1,6 +1,6 @@
 export default function Card(){
     return(
-        <div className="bg-gray-100 w-[270px] h-[150px] rounded-md p-4">
+        <div className="bg-gray-100 w-[270px] h-[150px] rounded-md p-4 sm:w-[360px]">
             <div className="flex justify-evenly items-center gap-4">
                 <img className="w-[90px] h-[80px] object-cover" src="https://eataalborg.dk/File/1661/Bog%C3%B8_-96.png?ticks=637402117710000000"/>
                 <div className="flex flex-col">
