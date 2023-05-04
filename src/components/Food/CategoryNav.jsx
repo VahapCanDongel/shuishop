@@ -11,9 +11,9 @@ export default function CategoryNav() {
         Noodles
         <div className="childNav w-8 h-1 bg-pink-400" ></div>
       </li>
-      <li className="hover:text-pink-400" onClick={() => changePage("sushi")}>Shushis</li>
-      <li className="hover:text-pink-400" onClick={() => changePage("drink")}>Drinks</li>
-      <li className="hover:text-pink-400" onClick={() => changePage("dessert")}>Desserts</li>
+      <li className="categoryNav   flex flex-col justify-center items-center" onClick={() => changePage("sushi")}>Shushis <div className="childNav w-8 h-1 bg-pink-400" ></div></li>
+      <li className="categoryNav   flex flex-col justify-center items-center" onClick={() => changePage("drink")}>Drinks <div className="childNav w-8 h-1 bg-pink-400" ></div></li>
+      <li className="categoryNav   flex flex-col justify-center items-center" onClick={() => changePage("dessert")}>Desserts <div className="childNav w-8 h-1 bg-pink-400" ></div></li>
     </ul>
   );
 }
