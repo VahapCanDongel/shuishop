@@ -15,7 +15,7 @@ export default function Foods() {
             <SectionTitle title={'Foods'} />
             <CategoryNav />
             {page === "noodle" && (
-                <div className='h-[400px] overflow-scroll grid grid-cols-2 gap-8 rounded-md w-1/2 sm:grid-cols-1 sm:w-full sm:flex sm:flex-col sm:justify-center sm:items-center'>
+                <div className='h-[400px] overflow-scroll grid grid-cols-2 gap-12 rounded-md w-1/2 sm:grid-cols-1 sm:w-full sm:flex sm:flex-col sm:justify-center sm:items-center'>
                     <Card />
                     <Card />
                     <Card />
