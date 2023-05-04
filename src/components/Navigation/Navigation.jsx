@@ -1,7 +1,7 @@
 import { useState } from "react";
 
 export default function Navigation() {
-const [leftMenuVisibility , setLeftMenuVisibility] = useState(false)
+  const [leftMenuVisibility, setLeftMenuVisibility] = useState(false);
 
   return (
     <div className="flex justify-center w-full items-center p-4">
@@ -17,9 +17,15 @@ const [leftMenuVisibility , setLeftMenuVisibility] = useState(false)
           <li>
             <a href="#home">Home</a>
           </li>
-          <li><a href="#specials">Discounts</a></li>
-          <li><a href="#foods">Products</a></li>
-          <li><a href="#location">Location</a></li>
+          <li>
+            <a href="#specials">Discounts</a>
+          </li>
+          <li>
+            <a href="#foods">Products</a>
+          </li>
+          <li>
+            <a href="#location">Location</a>
+          </li>
           <li className="bg-gray-200 p-2 rounded-md w-[80px] flex justify-center items-center">
             <svg
               width={25}
@@ -33,7 +39,10 @@ const [leftMenuVisibility , setLeftMenuVisibility] = useState(false)
           </li>
         </ul>
 
-        <div className="hidden  sm:visible sm:flex sm:justify-center sm:items-center sm:gap-6" onClick={()=> setLeftMenuVisibility(!leftMenuVisibility)}>
+        <div
+          className="hidden  sm:visible sm:flex sm:justify-center sm:items-center sm:gap-6"
+        
+        >
           <div className="p-2 rounded-md w-[60px] h-[60px] flex flex-col justify-center items-center border-[1px] border-gray-400">
             <svg
               width={25}
@@ -49,7 +58,7 @@ const [leftMenuVisibility , setLeftMenuVisibility] = useState(false)
             </div>
           </div>
 
-          <div className=" sm:bg-green-300 sm:w-[60px] sm:h-[60px] sm:rounded-md sm:flex sm:justify-center sm:items-center">
+          <div className=" sm:bg-green-300 sm:w-[60px] sm:h-[60px] sm:rounded-md sm:flex sm:justify-center sm:items-center"   onClick={() => setLeftMenuVisibility(!leftMenuVisibility)}>
             <svg
               width={46}
               height={46}
@@ -60,12 +69,27 @@ const [leftMenuVisibility , setLeftMenuVisibility] = useState(false)
             </svg>
           </div>
         </div>
+
+
+        {leftMenuVisibility && (
+          <div className="bg-gray-200 h-[250px] w-[200px] z-50 absolute right-0 top-[100px] mr-4 rounded-md p-2 flex justify-center items-center shadow-md">
+            <ul className="hidden sm:flex sm:flex-col sm:gap-4 sm:justify-center sm:items-center cursor-pointer ">
+              <li>
+                <a href="#home" className="text-[25px]">Home</a>
+              </li>
+              <li>
+                <a href="#specials" className="text-[25px]">Discounts</a>
+              </li>
+              <li>
+                <a href="#foods" className="text-[25px]">Products</a>
+              </li>
+              <li>
+                <a href="#location" className="text-[25px]">Location</a>
+              </li>
+            </ul>
+          </div>
+        )}
       </div>
-
-
-      {leftMenuVisibility && (
-        <div className="bg-green-400 h-screen w-[200px] absolute top-0"></div>
-      )}
     </div>
   );
 }
