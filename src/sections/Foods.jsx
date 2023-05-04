@@ -4,7 +4,7 @@ import Card from "../components/Food/Card";
 import CategoryNav from "../components/Food/CategoryNav";
 import SectionTitle from "../components/Section/SectionTitle";
 import usePageStore from "../store";
-import { CSSTransition, TransitionGroup } from 'react-transition-group';
+
 
 
 export default function Foods() {
