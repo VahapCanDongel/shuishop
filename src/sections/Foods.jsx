@@ -5,7 +5,7 @@ import CategoryNav from "../components/Food/CategoryNav";
 import SectionTitle from "../components/Section/SectionTitle";
 import usePageStore from "../store";
 import { CSSTransition, TransitionGroup } from 'react-transition-group';
-import '../slideInAnimation.css';
+
 
 export default function Foods() {
     const { page } = usePageStore();
