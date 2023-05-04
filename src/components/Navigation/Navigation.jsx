@@ -72,7 +72,7 @@ export default function Navigation() {
 
 
         {leftMenuVisibility && (
-          <div className="bg-gray-200 h-[250px] w-[200px] z-50 absolute right-0 top-[100px] mr-4 rounded-md p-2 flex justify-center items-center shadow-md">
+          <div className="hidden sm:visible sm:bg-gray-200 sm:h-[250px] sm:w-[200px] sm:z-50 sm:absolute sm:right-0 sm:top-[100px] sm:mr-4 sm:rounded-md sm:p-2 sm:flex sm:justify-center sm:items-center sm:shadow-md">
             <ul className="hidden sm:flex sm:flex-col sm:gap-4 sm:justify-center sm:items-center cursor-pointer ">
               <li>
                 <a href="#home" className="text-[25px]">Home</a>
