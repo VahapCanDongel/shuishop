@@ -31,7 +31,7 @@ export default function Specials() {
             <Card
               key={index}
               imgSrc={item.img}
-              title={item.title}
+              name={item.name}
               description={item.description}
               price={item.price}
             />
