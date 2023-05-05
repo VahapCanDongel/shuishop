@@ -1,39 +1,39 @@
 [
     {
         "img" : "",
-        "title ": "",
-        "description": "",
-        "price" : ""
+        "title ": "Dragon Roll",
+        "description": "A sushi roll filled with eel, cucumber, and avocado, topped with slices of avocado and unagi sauce.",
+        "price" : 14.99
     },
     {
         "img" : "",
-        "title ": "",
-        "description": "",
-        "price" : ""
+        "title ": "Spicy Tuna Roll",
+        "description": "A classic sushi roll filled with spicy tuna, cucumber, and avocado, with a kick of spicy mayo.",
+        "price" : 9.99
     },
     {
         "img" : "",
-        "title ": "",
-        "description": "",
-        "price" : ""
+        "title ": "Rainbow Roll",
+        "description": "A sushi roll filled with crab, avocado, and cucumber, topped with slices of tuna, salmon, yellowtail, and avocado.",
+        "price" : 16.99
     },
     {
         "img" : "",
-        "title ": "",
-        "description": "",
-        "price" : ""
+        "title ": "California Roll",
+        "description": "A sushi roll filled with crab, avocado, and cucumber, wrapped in seaweed and rice.",
+        "price" : 7.99
     },
     {
         "img" : "",
-        "title ": "",
-        "description": "",
-        "price" : ""
+        "title ": "Salmon Nigiri",
+        "description": "A traditional sushi dish consisting of a slice of raw salmon on top of a small ball of rice.",
+        "price" : 3.99
     },
     {
         "img" : "",
-        "title ": "",
-        "description": "",
-        "price" : ""
+        "title ": "Vegetable Roll",
+        "description": "A sushi roll filled with a variety of fresh vegetables such as cucumber, carrot, avocado, and bell pepper, wrapped in seaweed and rice.",
+        "price" : 6.99
     }
     
 
