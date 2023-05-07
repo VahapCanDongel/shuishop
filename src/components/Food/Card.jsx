@@ -1,6 +1,6 @@
 export default function Card({ name, imgSrc, description, price }) {
     return (
-        <div className="bg-gray-100 w-[370px] h-[150px] rounded-md p-4 sm:w-[360px] flex-shrink-0 ">
+        <div className="bg-gray-100 w-[370px] h-[160px] rounded-md p-4 sm:w-[360px] flex-shrink-0 ">
             <div className="flex justify-evenly items-center gap-4">
                 <img className="w-[90px] h-[80px] object-cover" src={imgSrc} />
                 <div className="flex flex-col">
