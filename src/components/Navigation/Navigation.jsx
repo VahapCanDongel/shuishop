@@ -143,7 +143,7 @@ export default function Navigation() {
             </div>
 
 
-            <div className="overflow-scroll w-full h-[400px] flex flex-col items-center gap-4">
+            <div className="overflow-scroll w-full h-[400px] flex flex-col items-center gap-4 hide-scrollbar">
               {cartItems.map((item, index) => (
                 <CartItemCard
                   key={index}
