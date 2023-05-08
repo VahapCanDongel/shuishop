@@ -2,6 +2,7 @@ import { useState } from "react";
 
 export default function Navigation() {
   const [leftMenuVisibility, setLeftMenuVisibility] = useState(false);
+  const [cartModalVisibility, setCartModalVisibility] = useState(false)
 
   return (
     <div className="flex justify-center w-full items-center p-4">
@@ -26,7 +27,7 @@ export default function Navigation() {
           <li>
             <a href="#location">Location</a>
           </li>
-          <li className="bg-gray-200 p-2 rounded-md w-[80px] flex justify-center items-center">
+          <li className="bg-gray-200 p-2 rounded-md w-[80px] flex justify-center items-center" onClick={() => setCartModalVisibility(!cartModalVisibility)}>
             <svg
               width={25}
               height={25}
@@ -41,7 +42,7 @@ export default function Navigation() {
 
         <div
           className="hidden  sm:visible sm:flex sm:justify-center sm:items-center sm:gap-6"
-        
+
         >
           <div className="p-2 rounded-md w-[60px] h-[60px] flex flex-col justify-center items-center border-[1px] border-gray-400">
             <svg
@@ -58,7 +59,7 @@ export default function Navigation() {
             </div>
           </div>
 
-          <div className=" sm:bg-green-300 sm:w-[60px] sm:h-[60px] sm:rounded-md sm:flex sm:justify-center sm:items-center"   onClick={() => setLeftMenuVisibility(!leftMenuVisibility)}>
+          <div className=" sm:bg-green-300 sm:w-[60px] sm:h-[60px] sm:rounded-md sm:flex sm:justify-center sm:items-center" onClick={() => setLeftMenuVisibility(!leftMenuVisibility)}>
             <svg
               width={46}
               height={46}
@@ -90,6 +91,43 @@ export default function Navigation() {
           </div>
         )}
       </div>
+
+
+      {cartModalVisibility && (
+        <div className="fixed top-0 left-0 w-full h-full flex justify-center items-center z-50 shadow-2xl bg-gray-400 bg-opacity-40">
+          <div className="bg-white rounded-md shadow-lg h-[600px] w-[600px] flex items-center flex-col gap-8">
+            <div className="flex items-center justify-between w-full p-6">
+              <div className="text-[20px] my-4">
+                Cart
+              </div>
+
+              <div className="text-[34px] rotate-45 cursor-pointer hover:rotate-90 transition" onClick={() => setCartModalVisibility(!cartModalVisibility)}>+</div>
+            </div>
+
+
+            <div className="overflow-scroll w-full h-[400px]">
+
+            </div>
+
+            <div className="flex w-full flex-col items-center p-4">
+              <div className="flex justify-between w-full p-2">
+                <div className="text-[20px]">
+                  Total
+                </div>
+
+
+                <div className="text-[20px]">
+                  £120.90
+                </div>
+              </div>
+              <div className="bg-green-300 rounded-md p-2 w-[350px] flex justify-center items-center cursor-pointer hover:bg-green-200 transition">Complete Order</div>
+            </div>
+
+
+          </div>
+        </div>
+      )}
+
     </div>
   );
 }
