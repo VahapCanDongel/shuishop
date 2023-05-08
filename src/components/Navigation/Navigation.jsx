@@ -40,7 +40,7 @@ export default function Navigation() {
 
   return (
     <div className="flex justify-center w-full items-center p-4">
-      <div className="flex justify-between w-1/2 sm:justify-between sm:w-full sm:items-center">
+      <div className="flex justify-between w-1/2 sm:justify-between sm:w-full sm:items-center md:justify-between md:w-full md:items-center">
         <div>
           <img
             src="https://www.nicepng.com/png/full/307-3078997_some-things-on-the-horizon-for-sushi-sushi.png"
@@ -48,7 +48,7 @@ export default function Navigation() {
           />
         </div>
 
-        <ul className="flex gap-4 justify-center items-center cursor-pointer sm:hidden">
+        <ul className="flex gap-4 justify-center items-center cursor-pointer sm:hidden md:hidden">
           <li>
             <a href="#home">Home</a>
           </li>
@@ -79,7 +79,7 @@ export default function Navigation() {
         </ul>
 
         <div
-          className="hidden  sm:visible sm:flex sm:justify-center sm:items-center sm:gap-6"
+          className="hidden sm:visible md:visible md:flex md:justify-center md:items-center md:gap-6 sm:flex sm:justify-center sm:items-center sm:gap-6"
 
         >
           <div className="p-2 rounded-md w-[60px] h-[60px] flex flex-col justify-center items-center border-[1px] border-gray-400" onClick={() => setCartModalVisibility(!cartModalVisibility)}>
@@ -97,7 +97,7 @@ export default function Navigation() {
             </div>
           </div>
 
-          <div className=" sm:bg-green-300 sm:w-[60px] sm:h-[60px] sm:rounded-md sm:flex sm:justify-center sm:items-center" onClick={() => setLeftMenuVisibility(!leftMenuVisibility)}>
+          <div className="md:bg-green-300 md:w-[60px] md:h-[60px] md:rounded-md md:flex md:justify-center md:items-center sm:bg-green-300 sm:w-[60px] sm:h-[60px] sm:rounded-md sm:flex sm:justify-center sm:items-center" onClick={() => setLeftMenuVisibility(!leftMenuVisibility)}>
             <svg
               width={46}
               height={46}
@@ -111,8 +111,10 @@ export default function Navigation() {
 
 
         {leftMenuVisibility && (
-          <div className="hidden sm:visible sm:bg-gray-200 sm:h-[250px] sm:w-[200px] sm:z-50 sm:absolute sm:right-0 sm:top-[100px] sm:mr-4 sm:rounded-md sm:p-2 sm:flex sm:justify-center sm:items-center sm:shadow-md">
-            <ul className="hidden sm:flex sm:flex-col sm:gap-4 sm:justify-center sm:items-center cursor-pointer ">
+          <div className="hidden sm:visible sm:bg-gray-200 sm:h-[250px] sm:w-[200px] sm:z-50 sm:absolute sm:right-0 sm:top-[100px] sm:mr-4 sm:rounded-md sm:p-2 sm:flex sm:justify-center sm:items-center sm:shadow-md md:visible md:bg-gray-200 md:h-[250px] md:w-[200px] md:z-50 md:absolute md:right-0 md:top-[100px] md:mr-4 md:rounded-md md:p-2 md:flex md:justify-center md:items-center md:shadow-md
+          ">
+            <ul className="hidden sm:flex sm:flex-col sm:gap-4 sm:justify-center sm:items-center cursor-pointer md:flex md:flex-col md:gap-4 md:justify-center md:items-center cursor-pointer
+">
               <li>
                 <a href="#home" className="text-[25px]">Home</a>
               </li>

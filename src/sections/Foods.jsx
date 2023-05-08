@@ -162,42 +162,36 @@ export default function Foods() {
 
 
     return (
-        <div className="my-20 flex justify-between flex-col items-center w-[80%]  sm:flex-col gap-4 sm:w-full transition" id="foods">
+        <div className="my-20 flex justify-between flex-col items-center w-[80%]  sm:flex-col  md:flex-col gap-4 sm:w-full transition" id="foods">
             <SectionTitle title={'Foods'} />
             <CategoryNav />
-            {page === "noodle" && (
-                <div className='hide-scrollbar overflow-scroll grid grid-cols-2 gap-20 h-[400px] flex-shrink-0 rounded-md w-3/4 sm:overflow-scroll  sm:w-full sm:flex sm:flex-col sm:justify-center sm:items-center'>
-                    {
-                        noodles.map((item, index) => (
-                            <Card key={index} name={item.name} price={item.price} description={item.description} imgSrc={item.img} />
-                        ))
-                    }
 
-                </div>
-            )}
+            <div className='hide-scrollbar overflow-scroll grid grid-cols-2 gap-20 h-[400px] flex-shrink-0 rounded-md w-3/4 sm:overflow-scroll  sm:w-full sm:flex sm:flex-col sm:justify-center sm:items-center md:overflow-scroll md:w-full md:flex md:flex-col md:justify-center md:items-center
+'>
+                {page === "noodle" && (
+                    noodles.map((item, index) => (
+                        <Card key={index} name={item.name} price={item.price} description={item.description} imgSrc={item.img} />
+                    ))
+                )
+                }
+                {page === "sushi" && (
+                    sushis.map((item, index) => (
+                        <Card key={index} name={item.name} price={item.price} description={item.description} imgSrc={item.img} />
+                    ))
+                )}
+                {page === "drink" && (
+                    drinks.map((item, index) => (
+                        <Card key={index} name={item.name} price={item.price} description={item.description} imgSrc={item.img} />
+                    ))
+                )}
+                {page === "dessert" && (
+                    desserts.map((item, index) => (
+                        <Card key={index} name={item.name} price={item.price} description={item.description} imgSrc={item.img} />
+                    ))
+                )}
 
-            {page === "sushi" && (
-                <div className='hide-scrollbar overflow-scroll grid grid-cols-2 gap-20 h-[400px] flex-shrink-0 rounded-md w-3/4 sm:overflow-scroll  sm:w-full sm:flex sm:flex-col sm:justify-center sm:items-center'>
-                    {sushis.map((item, index) => (
-                        <Card key={index} name={item.name} price={item.price} description={item.description} imgSrc={item.img} />
-                    ))}
-                </div>
-            )}
-            {page === "drink" && (
-                <div className='hide-scrollbar overflow-scroll grid grid-cols-2 gap-20 h-[400px] flex-shrink-0 rounded-md w-3/4 sm:overflow-scroll sm:w-full sm:flex sm:flex-col sm:justify-center sm:items-center'>
-                    {drinks.map((item, index) => (
-                        <Card key={index} name={item.name} price={item.price} description={item.description} imgSrc={item.img} />
-                    ))}
-                </div>
-            )}
-            {page === "dessert" && (
-                <div className='hide-scrollbar overflow-scroll grid grid-cols-2 gap-20 h-[400px] flex-shrink-0 rounded-md w-3/4 sm:overflow-scroll sm:w-full sm:flex sm:flex-col sm:justify-center sm:items-center'>
-                    {desserts.map((item, index) => (
-                        <Card key={index} name={item.name} price={item.price} description={item.description} imgSrc={item.img} />
-                    ))}
-                </div>
-            )}
 
+            </div>
         </div>
     );
 }
