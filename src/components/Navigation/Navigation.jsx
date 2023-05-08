@@ -1,4 +1,5 @@
 import { useState } from "react";
+import CartItemCard from "./CartItemCard";
 
 export default function Navigation() {
   const [leftMenuVisibility, setLeftMenuVisibility] = useState(false);
@@ -95,7 +96,7 @@ export default function Navigation() {
 
       {cartModalVisibility && (
         <div className="fixed top-0 left-0 w-full h-full flex justify-center items-center z-50 shadow-2xl bg-gray-400 bg-opacity-40">
-          <div className="bg-white rounded-md shadow-lg h-[600px] w-[600px] flex items-center flex-col gap-8">
+          <div className="bg-white rounded-md shadow-lg h-[600px] w-[600px] flex items-center flex-col">
             <div className="flex items-center justify-between w-full p-6">
               <div className="text-[20px] my-4">
                 Cart
@@ -105,8 +106,10 @@ export default function Navigation() {
             </div>
 
 
-            <div className="overflow-scroll w-full h-[400px]">
-
+            <div className="overflow-scroll w-full h-[400px] flex flex-col items-center gap-4">
+              <CartItemCard />
+              <CartItemCard />
+              <CartItemCard />
             </div>
 
             <div className="flex w-full flex-col items-center p-4">
