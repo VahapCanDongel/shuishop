@@ -126,24 +126,12 @@ export default function Foods() {
     ]
 
     const sushis = [
-        {
-            "img": "https://cdn.yosushi.com/r/w-1000/YoSushi/files/e7/e7e1a83f-4f35-4ae6-aa4e-602cd7f02d9d.638173692690000000.png",
-            "price": 12.99,
-            "name": "Rainbow Roll",
-            "description": "A colorful combination of tuna, salmon, and avocado wrapped in sushi rice and seaweed."
-        },
+
         {
             "img": "https://jow.fr/_next/image?url=https%3A%2F%2Fstatic.jow.fr%2F880x880%2Frecipes%2FphsDckvVj0SEQA.png&w=2560&q=100",
             "price": 8.99,
             "name": "Spicy Tuna Roll",
             "description": "Fresh tuna mixed with spicy mayo, wrapped in sushi rice and seaweed."
-        },
-
-        {
-            "img": "https://cdn.yosushi.com/r/w-1000/YoSushi/files/07/0799897a-833d-453b-ade8-1a2675bac142.638173692740000000.png",
-            "price": 14.99,
-            "name": "Dragon Roll",
-            "description": "Eel, cucumber, and avocado wrapped in sushi rice and seaweed, topped with eel sauce and sesame seeds."
         },
 
         {

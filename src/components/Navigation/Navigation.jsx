@@ -1,9 +1,42 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import CartItemCard from "./CartItemCard";
 
 export default function Navigation() {
   const [leftMenuVisibility, setLeftMenuVisibility] = useState(false);
   const [cartModalVisibility, setCartModalVisibility] = useState(false)
+
+  const [cartItems, setCartItems] = useState([]);
+
+  const loadFromLocalStorage = (key) => {
+    try {
+      const serializedData = localStorage.getItem(key);
+      if (serializedData === null) {
+        return undefined;
+      }
+      return JSON.parse(serializedData);
+    } catch (error) {
+      console.error('Error loading data from local storage:', error);
+      return undefined;
+    }
+  };
+
+  const deleteItem = (index) => {
+    const newCartItems = [...cartItems];
+    newCartItems.splice(index, 1);
+    setCartItems(newCartItems);
+    localStorage.setItem('basketItems', JSON.stringify(newCartItems));
+  };
+
+  useEffect(() => {
+    const loadedItems = loadFromLocalStorage('basketItems') || [];
+    setCartItems(loadedItems);
+  }, [cartModalVisibility]);
+
+  const totalItemsInCart = cartItems.length;
+  const total = cartItems.reduce((acc, item) => acc + item.price, 0);
+
+
+
 
   return (
     <div className="flex justify-center w-full items-center p-4">
@@ -45,7 +78,7 @@ export default function Navigation() {
           className="hidden  sm:visible sm:flex sm:justify-center sm:items-center sm:gap-6"
 
         >
-          <div className="p-2 rounded-md w-[60px] h-[60px] flex flex-col justify-center items-center border-[1px] border-gray-400">
+          <div className="p-2 rounded-md w-[60px] h-[60px] flex flex-col justify-center items-center border-[1px] border-gray-400" onClick={() => setCartModalVisibility(!cartModalVisibility)}>
             <svg
               width={25}
               height={25}
@@ -56,7 +89,7 @@ export default function Navigation() {
             </svg>
             Cart
             <div className="bg-green-300 w-6 h-6 rounded-full absolute mb-14 mr-14 flex justify-center items-center">
-              2
+              {totalItemsInCart}
             </div>
           </div>
 
@@ -107,9 +140,16 @@ export default function Navigation() {
 
 
             <div className="overflow-scroll w-full h-[400px] flex flex-col items-center gap-4">
-              <CartItemCard />
-              <CartItemCard />
-              <CartItemCard />
+              {cartItems.map((item, index) => (
+                <CartItemCard
+                  key={index}
+                  name={item.name}
+                  imgSrc={item.imgSrc}
+                  description={item.description}
+                  price={item.price}
+                  deleteItem={deleteItem}
+                />
+              ))}
             </div>
 
             <div className="flex w-full flex-col items-center p-4">
@@ -120,7 +160,7 @@ export default function Navigation() {
 
 
                 <div className="text-[20px]">
-                  £120.90
+                  £{total.toFixed(2)}
                 </div>
               </div>
               <div className="bg-green-300 rounded-md p-2 w-[350px] flex justify-center items-center cursor-pointer hover:bg-green-200 transition">Complete Order</div>
