@@ -162,7 +162,7 @@ export default function Foods() {
 
 
     return (
-        <div className="my-20 flex justify-between flex-col items-center w-[80%]  sm:flex-col  md:flex-col gap-4 sm:w-full transition" id="foods">
+        <div className="my-20 flex justify-between flex-col items-center w-[80%]  sm:flex-col  md:flex-col gap-4  transition" id="foods">
             <SectionTitle title={'Foods'} />
             <CategoryNav />
 
