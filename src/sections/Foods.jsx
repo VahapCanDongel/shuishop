@@ -1,5 +1,3 @@
-// Foods.js
-import React, { useEffect, useState } from 'react';
 import Card from "../components/Food/Card";
 import CategoryNav from "../components/Food/CategoryNav";
 import SectionTitle from "../components/Section/SectionTitle";

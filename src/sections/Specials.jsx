@@ -1,6 +1,5 @@
 import SectionTitle from "../components/Section/SectionTitle";
 import Card from "../components/Specials/Card";
-import { useState, useEffect } from "react";
 
 export default function Specials() {
   const data = [
@@ -23,21 +22,6 @@ export default function Specials() {
       "price": 10.99
     },
   ]
-
-
-  // const [offerFoods, setOfferFoods] = useState([]);
-
-  // useEffect(() => {
-  //   fetch("../../utils/offers.json")
-  //     .then((response) => response.json())
-  //     .then((data) => {
-  //       setOfferFoods(data);
-  //     })
-  //     .catch((error) => {
-  //       console.error("Error retrieving JSON data: ", error);
-  //     });
-  // }, []);
-
   return (
     <div
       className="my-20 flex justify-between flex-col items-center w-[80%] sm:flex-col"
