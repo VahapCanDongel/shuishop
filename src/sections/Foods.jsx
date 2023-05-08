@@ -166,7 +166,7 @@ export default function Foods() {
             <SectionTitle title={'Foods'} />
             <CategoryNav />
             {page === "noodle" && (
-                <div className='overflow-scroll grid grid-cols-2 gap-20 h-[400px] flex-shrink-0 rounded-md w-3/4 sm:overflow-scroll  sm:w-full sm:flex sm:flex-col sm:justify-center sm:items-center'>
+                <div className='hide-scrollbar overflow-scroll grid grid-cols-2 gap-20 h-[400px] flex-shrink-0 rounded-md w-3/4 sm:overflow-scroll  sm:w-full sm:flex sm:flex-col sm:justify-center sm:items-center'>
                     {
                         noodles.map((item, index) => (
                             <Card key={index} name={item.name} price={item.price} description={item.description} imgSrc={item.img} />
@@ -177,21 +177,21 @@ export default function Foods() {
             )}
 
             {page === "sushi" && (
-                <div className='overflow-scroll grid grid-cols-2 gap-20 h-[400px] flex-shrink-0 rounded-md w-3/4 sm:overflow-scroll  sm:w-full sm:flex sm:flex-col sm:justify-center sm:items-center'>
+                <div className='hide-scrollbar overflow-scroll grid grid-cols-2 gap-20 h-[400px] flex-shrink-0 rounded-md w-3/4 sm:overflow-scroll  sm:w-full sm:flex sm:flex-col sm:justify-center sm:items-center'>
                     {sushis.map((item, index) => (
                         <Card key={index} name={item.name} price={item.price} description={item.description} imgSrc={item.img} />
                     ))}
                 </div>
             )}
             {page === "drink" && (
-                <div className='overflow-scroll grid grid-cols-2 gap-20 h-[400px] flex-shrink-0 rounded-md w-3/4 sm:overflow-scroll sm:w-full sm:flex sm:flex-col sm:justify-center sm:items-center'>
+                <div className='hide-scrollbar overflow-scroll grid grid-cols-2 gap-20 h-[400px] flex-shrink-0 rounded-md w-3/4 sm:overflow-scroll sm:w-full sm:flex sm:flex-col sm:justify-center sm:items-center'>
                     {drinks.map((item, index) => (
                         <Card key={index} name={item.name} price={item.price} description={item.description} imgSrc={item.img} />
                     ))}
                 </div>
             )}
             {page === "dessert" && (
-                <div className='overflow-scroll grid grid-cols-2 gap-20 h-[400px] flex-shrink-0 rounded-md w-3/4 sm:overflow-scroll sm:w-full sm:flex sm:flex-col sm:justify-center sm:items-center'>
+                <div className='hide-scrollbar overflow-scroll grid grid-cols-2 gap-20 h-[400px] flex-shrink-0 rounded-md w-3/4 sm:overflow-scroll sm:w-full sm:flex sm:flex-col sm:justify-center sm:items-center'>
                     {desserts.map((item, index) => (
                         <Card key={index} name={item.name} price={item.price} description={item.description} imgSrc={item.img} />
                     ))}

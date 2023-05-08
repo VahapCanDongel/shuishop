@@ -47,7 +47,7 @@ export default function Specials() {
         <SectionTitle title={"Our Special Sushi Deals %"} />
       </div>
 
-      <div className="flex gap-4 justify-between items-center w-full  my-4 sm:flex-col sm:gap-14 overflow-x-scroll h-[600px] ">
+      <div className="flex gap-4 justify-between items-center w-full  my-4 sm:flex-col sm:gap-14 overflow-x-scroll h-[600px] hide-scrollbar">
         {Array.isArray(data) &&
           data.map((item, index) => (
             <Card
